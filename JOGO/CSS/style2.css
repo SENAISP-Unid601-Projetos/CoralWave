@@ -104,7 +104,7 @@ body {
     pointer-events: none; /* Impede a interação com as imagens escondidas */
   }
   #conteudo{
-    cursor: url('/IMG/mangueira.png') 16 16, auto;
+    cursor: url('../IMG/mangueira.png') 16 16, auto;
   }#mar {
     position: fixed; /* Para garantir que fique fixo no fundo */
     z-index: -1; /* Mantém atrás dos outros elementos */

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Caramel";
-  src: url("/FONTES/Super Caramel.ttf");
+  src: url("../FONTES/Super Caramel.ttf");
 }
 
 body {
@@ -511,7 +511,7 @@ overflow: hidden; /* Para evitar a barra de rolagem se não necessária */
 position: absolute;
 width: 320px;
 height: 200px;
-cursor: url('/IMG/maolimpa.png') 16 16, auto;
+cursor: url('../IMG/maolimpa.png') 16 16, auto;
 }
 
 #scratcher1 {

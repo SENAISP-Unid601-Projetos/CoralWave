@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/JOGO/CSS/style2.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/JOGO/CSS/style.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/JOGO/CSS/style3.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../JOGO/CSS/style2.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../JOGO/CSS/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../JOGO/CSS/style3.css" media="screen" />
     <title>Fase 2</title>
     <style>
       .transparent-button {
@@ -47,32 +47,32 @@
 
   <div id="conteudo">  
     <div class="background">
-        <img id="mar" src="/JOGO/IMG/fundo mar jogo 1.png" alt="Background Image">
+        <img id="mar" src="../JOGO/IMG/fundo mar jogo 1.png" alt="Background Image">
       </div>
     
     <div class="container">
         <div class="scratcher" id="scratcher1">
           <canvas id="canvas1"></canvas>
-          <img id="initial-image1" src="/JOGO/IMG/tartaruga.suja.png" style="display:none;">
-          <img id="hidden-image1" src="/JOGO/IMG/tartaruga 1.png">
+          <img id="initial-image1" src="../JOGO/IMG/tartaruga.suja.png" style="display:none;">
+          <img id="hidden-image1" src="../JOGO/IMG/tartaruga 1.png">
         </div>
         
         <div class="scratcher" id="scratcher2">
           <canvas id="canvas2"></canvas>
-          <img id="initial-image2" src="/JOGO/IMG/tartaruga.suja.png" style="display:none;">
-          <img id="hidden-image2" src="/JOGO/IMG/tartaruga 1.png">
+          <img id="initial-image2" src="../JOGO/IMG/tartaruga.suja.png" style="display:none;">
+          <img id="hidden-image2" src="../JOGO/IMG/tartaruga 1.png">
         </div>
       
         <div class="scratcher" id="scratcher3">
           <canvas id="canvas3"></canvas>
-          <img id="initial-image3" src="/JOGO/IMG/tartaruga.suja.png" style="display:none;">
-          <img id="hidden-image3" src="/JOGO/IMG/tartaruga 1.png" >
+          <img id="initial-image3" src="../JOGO/IMG/tartaruga.suja.png" style="display:none;">
+          <img id="hidden-image3" src="../JOGO/IMG/tartaruga 1.png" >
         </div>
       
         <div class="scratcher" id="scratcher4">
           <canvas id="canvas4"></canvas>
-          <img id="initial-image4" src="/JOGO/IMG/tartaruga.suja.png" style="display:none;">
-          <img id="hidden-image4" src="/JOGO/IMG/tartaruga 1.png">
+          <img id="initial-image4" src="../JOGO/IMG/tartaruga.suja.png" style="display:none;">
+          <img id="hidden-image4" src="../JOGO/IMG/tartaruga 1.png">
         </div>
       </div>
         
@@ -82,18 +82,18 @@
      
     </div>
   <audio id="efeitoSonoro" loop>
-  <source src="/JOGO/SND/backmusic.mp3" type="audio/mpeg">
+  <source src="../JOGO/SND/backmusic.mp3" type="audio/mpeg">
   Seu navegador não suporta o elemento de áudio.
 </audio>
 <button id="playAudio" class="transparent-button">
   <span id="soundIcon" class="sound-icon">🔊</span>
 </button>
 <audio id="somOndas" loop>
-  <source src="/JOGO/SND/ondas.mp3" type="audio/mpeg">
+  <source src="../JOGO/SND/ondas.mp3" type="audio/mpeg">
   Seu navegador não suporta o elemento de áudio.
 </audio>
 </body>
-<script src="/JOGO/JS/script2.js"></script>
+<script src="../JOGO/JS/script2.js"></script>
 <script>
    document.addEventListener('DOMContentLoaded', () => {
     const playAudioButton = document.getElementById('playAudio');
