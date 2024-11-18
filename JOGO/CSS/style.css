@@ -1,0 +1,638 @@
+@font-face {
+  font-family: "Caramel";
+  src: url("/FONTES/Super Caramel.ttf");
+}
+
+body {
+ height: 200px;
+    background-color: #000000;
+ 
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+      transform: translateY(-60vw);
+      scale: 100% 0;
+  }
+  to {
+      transform: translateY(0);
+      scale: 100% 1;
+  }
+}
+
+@keyframes bounceFadeIn {
+  0% {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  50% {
+      opacity: 0.5;
+      transform: translateY(-20px);
+  }
+  70% {
+      opacity: 1;
+      transform: translateY(10px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+@keyframes float2 {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-15px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+#logo {
+  position: absolute;
+  width: 33%;
+  height: 50%;
+  left: 530px;
+  top:20px;
+  filter: drop-shadow(0 0 50px rgb(255, 255, 255));
+  animation: slidein 4.5s, float2 3s ease-in-out infinite;
+  z-index: 10;
+  animation-delay: 0s, 4.5s;
+}
+
+
+#início {
+  filter: drop-shadow(0 0 50px rgb(255, 255, 255));
+  position: absolute;
+  left: 680px;
+  top: 500px;
+  font-family: Caramel;
+  font-size: 30px;
+  border: 0;
+  width: 200px;
+  line-height: 2.5;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(16, 150, 192);
+  background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 20%,
+      rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  animation: bounceFadeIn 4.5s ease-out, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 4.5s;
+}
+
+#início:hover {
+  background-color: rgb(0, 170, 255);
+}
+
+#início:active {
+  box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+#sair {
+  filter: drop-shadow(0 0 50px rgb(255, 255, 255));
+  position: absolute;
+  left: 1080px;
+  top: 500px;
+  font-family: Caramel;
+  font-size: 30px;
+  border: 0;
+  width: 200px;
+  line-height: 2.5;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(16, 150, 192);
+  background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 20%,
+      rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  animation: bounceFadeIn 4.5s ease-out, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 4.5s;
+}
+
+#sair:hover {
+  background-color: rgb(0, 170, 255);
+}
+
+#sair:active {
+  box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+#volume-control {
+  width: 50%; /* Para ocupar toda a largura disponível */
+  margin-top: 10px; /* Espaço acima do controle */
+}
+:root {
+  --popup-btn-width: unset;
+  --popup-btn-height: unset;
+  --popup-btn-padding: 10px 20px;
+  --popup-btn-size: 1.2rem;
+  --popup-btn-radius: 4px;
+  --popup-btn-color: #ecf0f0;
+  --popup-btn-bg-color: rgb(16, 150, 192);
+  --popup-btn-bg-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.627),
+      rgba(0, 0, 0, 0.2) 20%,
+      rgba(0, 0, 0, 0)
+  );
+  --active-popup-bg-color: #1cd8ed5c;
+  --popup-container-width: 80vw;
+  --popup-container-height: 70vh;
+  --popup-container-bg-color: #00b0d3e8;
+  --popup-container-color: #4876ff;
+  --popup-container-radius: 4px;
+  --popup-close-content: '×';
+  --popup-close-bg: #2cb9fa;
+  --popup-close-color: #f0ecee;
+  --popup-close-width: 24px;
+  --popup-close-height: 24px;
+  --popup-close-size: 22px;
+  --popup-close-radius-tl: 50%;
+  --popup-close-radius-tr: 50%;
+  --popup-close-radius-br: 50%;
+  --popup-close-radius-bl: 50%;
+  --popup-close-mt: 6px;
+  --popup-close-mr: 14px;
+  --popup-close-mb: 6px;
+  --popup-content-mt: 0px;
+  --popup-content-mr: 0px;
+  --popup-content-mb: 0px;
+  --popup-content-ml: 0px;
+  --popup-content-padding: 20px 14px 14px 14px;
+}
+
+/* Estilos gerais dos botões */
+#opções, #início, #sair {
+  filter: drop-shadow(0 0 50px rgb(255, 255, 255));
+  position: absolute;
+  font-family: Caramel;
+  font-size: 30px;
+  border: 0;
+  width: 200px;
+  line-height: 2.5;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(16, 150, 192);
+  background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 20%,
+      rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  animation: bounceFadeIn 4.5s ease-out, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 4.5s;
+}
+
+#opções {
+  left: 300px;
+  top: 500px;
+}
+
+#opções:hover, #início:hover, #sair:hover {
+  background-color: rgb(0, 170, 255);
+}
+
+#opções:active, #início:active, #sair:active {
+  box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Estilos do popup */
+.popup-container {
+  font-family: Caramel;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 4px #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 70vh;
+  background-color: #00b0d3d5;
+  border-radius: 4px;
+  padding: 20px 14px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: none;
+}
+#texto1{
+  font-size: 48px;
+  margin-top: -20px;
+}
+.popup-close {
+  position: absolute;
+  top: 6px;
+  right: 14px;
+  width: 54px;
+  height: 54px;
+  font-size: 22px;
+  background-color: #72d0ffc0;
+  color: #f0ecee;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.popup-close:hover {
+  background-color: #2596a33c;
+}
+
+.popup-content {
+  padding: 20px 14px;
+}
+/*-------------------------------------------------------------------blur de fundo da página enquanto o pop up existe*/
+
+
+/* Quando o blur for removido, a transição de volta também será suave */
+#conteudo {
+  transition: filter 0.5s ease; /* Aplica a mesma transição ao remover o blur */
+  min-height: 100vh;
+}
+
+/*-------------------------------------------------------------------------------------------------------------fase 1*/
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes float2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#metal{
+  width: 9%;
+  position: absolute;
+  left: 1080px;
+  top: 60px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#metal2{
+  width: 9%;
+  position: absolute;
+  left: 1300px;
+  top: 200px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#metal3{
+  width: 9%;
+  position: absolute;
+  left: 70px;
+  top: 60px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#metal4{
+  width: 9%;
+  position: absolute;
+  left: 400px;
+  top: 300px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#metal5{
+  width: 9%;
+  position: absolute;
+  left: 800px;
+  top: 500px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#vidro{
+  width: 9%;
+  position: absolute;
+  left: 580px;
+  top: 480px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#vidro2{
+  width: 9%;
+  position: absolute;
+  left: 920px;
+  top: 300px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#vidro3{
+  width: 9%;
+  position: absolute;
+  left: 70px;
+  top: 400px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#vidro4{
+  width: 9%;
+  position: absolute;
+  left: 500px;
+  top: 90px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#vidro5{
+  width: 9%;
+  position: absolute;
+  left: 1300px;
+  top: 520px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#plastico{
+  width: 9%;
+  position: absolute;
+  left: 800px;
+  top: 100px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#plastico2{
+  width: 9%;
+  position: absolute;
+  left: 350px;
+  top: 500px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#plastico3{
+  width: 9%;
+  position: absolute;
+  left: 270px;
+  top: 100px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#plastico4{
+  width: 9%;
+  position: absolute;
+  left: 620px;
+  top: 270px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+#plastico5{
+  width: 9%;
+  position: absolute;
+  left: 1200px;
+  top: 390px;
+  animation: fadeIn 2.5s ease-in, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 1.5s; /* Atraso da animação de flutuação para começar após a animação de entrada */ 
+}
+
+img {
+  transition: filter 0.3s ease;
+}
+
+#metal, #metal2, #metal3, #metal4, #metal5,
+#vidro, #vidro2, #vidro3, #vidro4, #vidro5,
+#plastico, #plastico2, #plastico3, #plastico4, #plastico5 {
+  width: 9%;
+  position: absolute;
+  filter: brightness(100%) drop-shadow(0 0 15px rgba(32, 81, 149, 0.7)); /* Sombra de brilho com forma da imagem */
+  transition: filter 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Efeito de brilho e sombra no hover */
+#metal:hover, #metal2:hover, #metal3:hover, #metal4:hover, #metal5:hover,
+#vidro:hover, #vidro2:hover, #vidro3:hover, #vidro4:hover, #vidro5:hover,
+#plastico:hover, #plastico2:hover, #plastico3:hover, #plastico4:hover, #plastico5:hover {
+  filter: brightness(120%) drop-shadow(0 0 25px rgba(255, 255, 255, 1)); /* Intensifica o brilho e a sombra */
+}
+
+img {
+  width: 9%;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+img.hidden {
+  opacity: 0;
+  pointer-events: none; /* Impede a interação com as imagens escondidas */
+}
+
+/*Estilo para garantir que a imagem de fundo não seja escondida */
+#mar {
+  position: fixed; /* Para garantir que fique fixo no fundo */
+  z-index: -1; /* Mantém atrás dos outros elementos */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cobre a largura inteira da janela */
+  height: 100vh; /* Cobre a altura inteira da janela */
+  object-fit: cover; /* Garante que cubra toda a área */
+  pointer-events: none; /* Não permite interação */
+  animation: fadeIn 2.5s ease-in;
+}
+/*---------------------------------------------------------- segunda fase */
+
+.container {
+position: relative;
+width: 100vw;
+height: 100vh;
+animation: fadeIn 2.5s ease-in;
+overflow: hidden; /* Para evitar a barra de rolagem se não necessária */
+}
+
+.scratcher {
+position: absolute;
+width: 320px;
+height: 200px;
+cursor: url('/IMG/maolimpa.png') 16 16, auto;
+}
+
+#scratcher1 {
+top: 10%;
+left: 10%;
+animation:  float2 3s ease-in-out infinite;
+}
+
+#scratcher2 {
+top: 10%;
+right: 10%;
+animation:  float2 3s ease-in-out infinite;
+}
+
+#scratcher3 {
+bottom: 10%;
+left: 10%;
+animation:  float2 3s ease-in-out infinite;
+}
+
+#scratcher4 {
+bottom: 10%;
+right: 10%;
+animation: float2 3s ease-in-out infinite;
+}
+
+#hidden-image1{
+width: 100%;
+height: 100%;
+position: absolute;
+margin-left: -320px;
+z-index: -1;
+user-select: none;
+}
+#hidden-image2{
+width: 100%;
+height: 100%;
+position: absolute;
+margin-top: 0px;
+margin-left: -320px;
+z-index: -1;
+user-select: none;
+}
+#hidden-image3{
+width: 100%;
+height: 100%;
+position: absolute;
+margin-left: -320px;
+margin-top: 0px;
+z-index: -1;
+user-select: none;
+}
+#hidden-image4{
+width: 100%;
+height: 100%;
+position: absolute;
+margin-left: -320px;
+z-index: -1;
+user-select: none;
+}
+#initial-image1{
+  user-select: none;
+}
+#initial-image2{
+  user-select: none;
+}
+#initial-image3{
+  user-select: none;
+}
+#initial-image4{
+  user-select: none;
+}
+.progress-bar-container {
+  width: 35%;
+  background-color: #ddd;
+  border-radius: 25px;
+  height: 20px;
+  position: fixed;
+  top: 20px; /* Posiciona a barra 10px abaixo do topo da página */
+  left: 500px;
+  z-index: 1000; /* Certifica-se de que a barra fique acima de outros elementos */
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: green;
+  border-radius: 25px;
+  transition: width 0.3s ease;
+}
+/* Estilo do popup */
+#popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 139, 0.515); /* Azul escuro com transparência */
+  color: white;
+  padding: 20px 40px;
+  border-radius: 15px;
+  font-family: Caramel;
+  font-size: 60px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  transition: opacity 1s ease, visibility 0s linear 1s; /* Transição suave */
+}
+
+/* Animação de entrada */
+#popup-message.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 0s;
+}
+
+/* Animação de saída */
+#popup-message.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 0s linear 1s;
+}
+/*--------------------------------------------------------fase3*/
+

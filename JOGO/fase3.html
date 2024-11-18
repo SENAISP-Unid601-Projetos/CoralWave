@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/JOGO/CSS/style2.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/JOGO/CSS/style.css" media="screen" />
+    <style>
+        .transparent-button {
+                 background-color: transparent; /* Torna o fundo do botão transparente */
+                 border: none; /* Remove a borda do botão */
+                 cursor: pointer; /* Muda o cursor ao passar o mouse */
+                 font-size: 24px; /* Tamanho do ícone */
+                 padding: 10px; /* Adiciona um pouco de espaço ao redor do ícone */
+                 outline: none; /* Remove o contorno ao clicar */
+                 position: absolute;
+                 margin-top: -1000px;
+                }
+     
+             .transparent-button:hover {
+                 opacity: 0.7; /* Adiciona um efeito de hover para indicar que o botão é clicável */
+             }
+     
+             .paused {
+                 position: relative; /* Para posicionar o pseudo-elemento */
+                 margin-top: -1000px;
+                }
+     
+             .paused::after {
+                 content: ""; /* Cria um pseudo-elemento */
+                 position: absolute; /* Posiciona em relação ao ícone */
+                 width: 100%; /* Largura igual ao ícone */
+                 height: 4px; /* Altura do traço */
+                 background-color: red; /* Cor do traço */
+                 top: 50%; /* Centraliza verticalmente */
+                 left: 0; /* Alinha à esquerda */
+                 transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+             }
+        
+    #conteudo {
+    cursor: url('/IMG/mangueira.png') 16 16, auto;
+  }
+    </style>
+    <title>Fase 3</title>
+</head>
+<body>
+    <div id="popup-message" class="popup">
+        Aspire as graxas ao perseguir e clicá-las!
+    </div>
+    
+    <div id="conteudo">
+    <div class="background">
+        <img id="mar" src="/JOGO/IMG/fundo mar jogo 2.png" alt="Background Image">
+      </div>
+      <canvas id="spriteCanvas" width="800" height="1000"></canvas>
+      <img id="g1" src="/JOGO/IMG/graxa.png">
+      <img id="g2" src="/JOGO/IMG/graxa.png">
+      <img id="g3" src="/JOGO/IMG/graxa.png">
+      <img id="g4" src="/JOGO/IMG/graxa.png">
+      <img id="g5" src="/JOGO/IMG/graxa.png">
+      <img id="g6" src="/JOGO/IMG/graxa.png">
+      <img id="g7" src="/JOGO/IMG/graxa.png">
+      <img id="g8" src="/JOGO/IMG/graxa.png">
+      <img id="g9" src="/JOGO/IMG/graxa.png">
+    </div>
+    <audio id="efeitoSonoro" loop>
+      <source src="/JOGO/SND/backmusic.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+  </audio>
+  <button id="playAudio" class="transparent-button">
+      <span id="soundIcon" class="sound-icon">🔊</span>
+  </button>
+  <audio id="somOndas" loop>
+      <source src="/JOGO/SND/ondas.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+  </audio>
+</body>
+<script src="/JOGO/JS/script3.js"></script>
+<script src="/JOGO/JS/script2.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const playAudioButton = document.getElementById('playAudio');
+    const soundIcon = document.getElementById('soundIcon');
+    const somOndas = document.getElementById('somOndas');
+    const efeitoSonoro = document.getElementById('efeitoSonoro');
+    let isPlaying = false; // Variável para rastrear se o som está tocando
+
+    playAudioButton.addEventListener('click', () => {
+        if (isPlaying) {
+            somOndas.pause(); // Pausa o som das ondas
+            efeitoSonoro.pause(); // Pausa o efeito sonoro
+            soundIcon.classList.add('paused'); // Adiciona a classe para o traço vermelho
+            isPlaying = false; // Atualiza o estado
+        } else {
+            somOndas.play().catch(error => {
+                console.error("Erro ao tentar tocar o som das ondas: ", error);
+            }); // Toca o som das ondas
+            efeitoSonoro.play().catch(error => {
+                console.error("Erro ao tentar tocar o efeito sonoro: ", error);
+            }); // Toca o efeito sonoro
+            soundIcon.classList.remove('paused'); // Remove a classe para o traço vermelho
+            isPlaying = true; // Atualiza o estado
+        }
+    });
+});
+</script>
+</html>

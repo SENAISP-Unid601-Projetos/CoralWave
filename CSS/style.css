@@ -1,0 +1,531 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #B0E8FF, #80C4FF);
+  background-attachment: fixed;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(/FONTES/quicksand/Quicksand_Bold.otf);
+}
+@font-face {
+  font-family: Quicksand thin;
+  src: url(/FONTES/quicksand/Quicksand_Light.otf);
+}
+h3 {
+  font-family: Quicksand;
+  font-size: 33px;
+  color: white;
+}
+
+#denis{
+  width: 100%;
+  margin-top: -2px;
+  z-index: -5;
+}
+#cabecalho{
+  position: fixed;
+  z-index: 1;
+}
+#jogue-agora {
+  font-family: Quicksand;
+  position: absolute;
+  bottom: -50px;
+  right: 40px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.482);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 25px
+}
+
+#jogue-agora:hover {
+  background-color: rgba(128, 128, 128, 0.5); /* Cinza semi-transparente */
+}
+#jogue-agora2 {
+  font-family: Quicksand;
+  position: relative;
+  display: inline-block;
+  transform: translate(1150px, -80px); /* Aumentei para direita (300px) e para cima (-100px) */
+    padding: 10px 30px;
+  /* Mantenha os outros estilos do seu botão aqui */
+  /* Por exemplo: */
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 179, 255);
+  font-size: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 25px;
+  border: none;
+  outline: none; /* Remove o outline que aparece ao clicar */
+}
+
+#jogue-agora2:hover {
+  background-color: rgb(0, 34, 255); /* Cinza semi-transparente */
+  color: rgb(255, 255, 255);
+}
+.menu-items {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 5px;
+    left: 600px;
+    padding: 10px;
+    right: 90px; /* Ajuste conforme necessário para que o último item fique em até 1400px */
+    width: calc(1320px - 500px); /* Largura total da área do menu */
+    gap: 50px;
+}
+.menu-items h3 a {
+  color: inherit; /* Herda a cor do texto do h3 */
+  text-decoration: none; /* Remove o sublinhado padrão do link */
+  display: block; /* Faz o link ocupar todo o espaço do h3 */
+  transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.menu-items h3 a:hover {
+  color: #66ccff; /* Cor quando o mouse passa por cima, ajuste conforme necessário */
+}
+#cabecalho h3 {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+#cabecalho h3:hover {
+  text-shadow: 0 0 5px rgba(0, 106, 255, 0.8),
+               0 0 2px rgba(3, 114, 226, 0.8),
+               0 0 5px rgba(255, 255, 255, 0.8);
+  color: white; /* Garante que o texto fique bem visível com o brilho */
+  transform: scale(1.1); /* Opcional: faz o texto aumentar levemente */
+}
+
+/* Efeito de linha aparecendo embaixo do texto */
+#cabecalho h3::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+#cabecalho h3:hover::after {
+  width: 100%;
+}
+#bolhas{
+  z-index: -5;
+}
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.666);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+  width: 20px;
+  height: 20px;
+  left: 20%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  left: 35%;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  animation-duration: 11s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(5) {
+  width: 35px;
+  height: 35px;
+  left: 55%;
+  animation-duration: 6s;
+  animation-delay: 1s;
+}
+
+/* Adicione mais variações para as outras bolhas */
+
+@keyframes rise {
+  0% {
+      bottom: -100px;
+      transform: translateX(0);
+  }
+  50% {
+      transform: translate(100px);
+  }
+  100% {
+      bottom: 1080px;
+      transform: translateX(-200px);
+  }
+}
+#destaques {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2500px; /* Ajuste este valor para controlar a distância da imagem do Denis */
+}
+
+#destaques img {
+  width: auto; /* ou defina uma largura específica se necessário */
+  height: auto;
+  margin: 0 auto; /* Isso centraliza a imagem horizontalmente */
+}
+h1{
+  font-size: 60px;
+  font-family: Quicksand;
+}
+#destaq{
+  position: absolute;
+  margin-top: -1200px;
+  margin-left: -800px;
+}
+#mais{
+  position: absolute;
+  margin-left: 850px;
+  color:#80C4FF;
+  margin-top: -950px;
+  cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+#mais:hover {
+  color: #00008B; /* Azul escuro */
+  text-decoration: underline;
+}
+.destaques-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.manchetes-container {
+  position: absolute;
+  margin-left: -50px;
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 250px); /* Largura fixa para cada coluna */
+  grid-template-rows: repeat(2, auto); /* 2 linhas com altura automática */
+  column-gap: 90px; /* Aumenta o espaço horizontal entre as colunas */
+    row-gap: 25px; /* Mantém o espaço vertical entre as linhas */
+}
+
+/* Ajuste específico para cada manchete se necessário */
+#m1 { grid-column: 1; grid-row: 1; }
+#m2 { grid-column: 2; grid-row: 1; }
+#m3 { grid-column: 3; grid-row: 2; }
+#m4 { grid-column: 1; grid-row: 2; }
+#m5 { grid-column: 2; grid-row: 2; }
+#m6 { grid-column: 1; grid-row: 3; }
+
+.manchete {
+  width: 100%;
+  height: auto;
+  display: block; /* Evita espaços indesejados */
+  transition: all 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.manchete:hover {
+  transform: scale(1.05); /* Aumenta o tamanho em 5% */
+  filter: brightness(1.1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Adiciona brilho e sombra suave */
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.estatico {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Ajuste conforme necessário */
+  margin-top: 120px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.estaticor-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.estaticor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: auto; /* Alterado de 140% para auto */
+  max-width: none;
+  object-fit: cover;
+}
+.logoemp {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%; /* Ou defina um tamanho específico, como 200px */
+  max-width: 80%; /* Evita que a logo fique maior que a div */
+  z-index: 0; /* Garante que a logo fique acima da imagem de transição */
+}
+h4{
+  font-family: Quicksand;
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+}
+.texto{
+  margin-left: 490px;
+  margin-top: -170px;
+  text-align: left;
+    line-height: 1.5; /* Melhora a legibilidade */
+    max-width: 1800px; /* Limita a largura do texto para melhor leitura */
+}
+.escrito{
+  margin-left: 400px;
+  margin-top: 250px;
+}
+.logo{
+  position: absolute;
+  width: 25%;
+  margin-left: -1370px;
+  margin-top: 150px;
+}
+
+.gamer{
+  margin-top: 100px;
+  margin-left: 250px;
+}
+.funde{
+  margin-left: -5px;
+  width: 102%;
+}
+.big-buttons-container {
+  position: absolute;
+  margin-top: 4000px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  gap: 450px; /* Espaço entre os botões */
+}
+
+.big-button {
+  background-color: rgba(0, 11, 55, 0.7); /* Preto com 70% de opacidade */
+  color: white;
+  border: none;
+  padding: 20px 90px;
+  font-family: Quicksand;
+  font-size: 54px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 35px;
+  transition: background-color 0.3s;
+}
+
+.big-button:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Um pouco mais escuro ao passar o mouse */
+}
+.site-footer {
+  margin-top: -35px;
+  background-color: #0E203D; /* Cor de fundo do footer */
+  color: white;
+  padding: 25px 0 45px;
+  width: 100%;
+  font-family: Quicksand thin;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center; /* Centraliza as seções horizontalmente */
+  align-items: center; /* Alinha verticalmente ao centro */
+  gap: 50px; /* Espaço entre as seções */
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  text-align: center;
+  font-family: Quicksand thin;
+}
+
+.footer-section h4 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Quicksand thin;
+}
+
+.site-footer img {
+  display: block;
+  margin: 30px auto;
+  max-width: 200px; /* Ajuste conforme necessário */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      gap: 20px;
+  }
+}
+/* Estilo para os links do footer */
+.footer-section h4 a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section h4 a:hover {
+  color: #66ccff;
+}
+/* Estilo para o botão de voltar ao topo */
+#btnTopo {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #0033665b;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 25px;
+  cursor: pointer;
+  display: none; /* Inicialmente oculto */
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#btnTopo:hover {
+  background-color: #004d99;
+  transform: translateY(-3px);
+}
+
+#btnTopo.visible {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.circle-arrow {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  color: black;
+  font-size: 18px;
+}
+
+#carrossel {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Isso fará o carrossel ocupar toda a altura da tela */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  object-fit: cover; /* Isso garante que a imagem cubra todo o espaço sem distorção */
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+#prev, #next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+}
+
+#prev {
+  left: 20px;
+}
+
+#next {
+  right: 20px;
+}

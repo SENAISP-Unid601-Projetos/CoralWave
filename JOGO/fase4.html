@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/JOGO/CSS/style.css" media="screen" />
+    <title>Fase 4</title>
+    <style>
+        .transparent-button {
+                 background-color: transparent; /* Torna o fundo do botão transparente */
+                 border: none; /* Remove a borda do botão */
+                 cursor: pointer; /* Muda o cursor ao passar o mouse */
+                 font-size: 24px; /* Tamanho do ícone */
+                 padding: 10px; /* Adiciona um pouco de espaço ao redor do ícone */
+                 outline: none; /* Remove o contorno ao clicar */
+                 position: absolute;
+                 margin-top: -980px;
+                 margin-left: -740px;
+                }
+     
+             .transparent-button:hover {
+                 opacity: 0.7; /* Adiciona um efeito de hover para indicar que o botão é clicável */
+             }
+     
+             .paused {
+                 position: relative; /* Para posicionar o pseudo-elemento */
+                 margin-top: -700px;
+                }
+     
+             .paused::after {
+                 content: ""; /* Cria um pseudo-elemento */
+                 position: absolute; /* Posiciona em relação ao ícone */
+                 width: 100%; /* Largura igual ao ícone */
+                 height: 4px; /* Altura do traço */
+                 background-color: red; /* Cor do traço */
+                 top: 50%; /* Centraliza verticalmente */
+                 left: 0; /* Alinha à esquerda */
+                 transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+             }
+        body {
+            text-align: center;
+        }
+
+        #conteudo {
+            position: relative;
+        }
+
+        /* Flexbox para lixeiras com espaçamento de 200px e margem maior no topo */
+        #lixeiras {
+            display: flex;
+            margin-top: 290px; /* Aumenta a margem superior */
+            animation: fadeIn 2.5s ease-in;
+            width: 250px; /* Ajuste conforme necessário */
+    height: 500px; /* Mantém a proporção da imagem */
+
+        }
+
+        #lixeira1 {
+            position: absolute;
+            width: 250px;
+            margin-left: 1250px;
+        }
+        #lixeira2 {
+            position: absolute;
+            width: 250px;
+            margin-left: 850px;
+        }
+        #lixeira3 {
+            position: absolute;
+            width: 250px;
+            margin-left: 400px;
+        }
+        #lixeira4 {
+            position: absolute;
+            width: 250px;
+            margin-left: 10px;
+        }
+        @keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+        .lixo {
+            position: absolute;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    user-select: none; /* Adiciona essa linha */
+    -webkit-user-select: none; /* Adiciona essa linha */
+    -moz-user-select: none; /* Adiciona essa linha */
+    -ms-user-select: none; /* Adiciona essa linha */
+    animation: fadeIn 2.5s ease-in;
+        }
+        .lixo.initial {
+    visibility: hidden;
+    left: -9999px;
+    top: -9999px;
+}
+        #mensagem {
+            font-size: 20px;
+            color: green;
+            display: none;
+        }
+
+        #erro {
+            font-size: 20px;
+            color: red;
+            display: none;
+        }
+        #mar {
+            width: 100%;
+        }
+        .hidden {
+            display: none; /* Esconde os elementos */
+        }
+          /* Estilo para o vídeo ocupar toda a tela */
+          #cutsceneVideo {
+            position: fixed; /* Fixa o vídeo na tela */
+            top: 0; /* Alinha ao topo */
+            left: 0; /* Alinha à esquerda */
+            width: 100vw; /* Largura total da janela */
+            height: 100vh; /* Altura total da janela */
+            z-index: 2; /* Coloca o vídeo acima do conteúdo */
+            display: none; /* Inicialmente oculto */
+        }
+    </style>
+</head>
+<body>
+    <div id="popup-message" class="popup">
+        Recicle clicando no lixo e escolhendo a lixeira correta!
+    </div>
+    
+    <div id="conteudo">  
+        <img id="mar" src="/JOGO/IMG/fundo praia mar.png">
+        <img id="lixo" class="lixo" src="" alt="lixo" style="display:none">
+        <!-- Lixos -->
+<img id="lixo1" class="lixo" src="/JOGO/IMG/lata.png" alt="Lixo de metal" data-tipo="metais" draggable="true" style="left: -180px; top: 100px;">
+<img id="lixo2" class="lixo" src="/JOGO/IMG/Garrafa de vidro.png" alt="Lixo de vidro" data-tipo="vidro" draggable="true" style="left: -110px; top: 100px;">
+<img id="lixo3" class="lixo" src="/JOGO/IMG/papel.png" alt="Lixo de papel" data-tipo="papéis" draggable="true" style="left: 120px; top: 200px; width: 130px; height: 90px;">
+<img id="lixo4" class="lixo" src="/JOGO/IMG/garrafa pet.png" alt="Lixo de plástico" data-tipo="plástico" draggable="true" style="left: -50px; top: 80px;">
+<!-- Novos lixos adicionados -->
+<img id="lixo5" class="lixo" src="/JOGO/IMG/lata amassada deitada.png" alt="Lixo de alumínio" data-tipo="metais" draggable="true" style="left: -400px; top: 180px; width: 90px; height: 50px;">
+<img id="lixo6" class="lixo" src="/JOGO/IMG/garrafa pet 2.png" alt="Lixo de vidro" data-tipo="plástico" draggable="true" style="left: 20px; top: 110px; width: 50px; height: 100px;">
+<img id="lixo7" class="lixo" src="/JOGO/IMG/papel.png" alt="Lixo de papel" data-tipo="papéis" draggable="true" style="left: 320px; top: 150px; width: 130px; height: 90px;">
+<img id="lixo8" class="lixo" src="/JOGO/IMG/sacolinha.png" alt="Lixo de plástico" data-tipo="plástico" draggable="true" style="left: -50px; top: 50px; width: 150px; height: 90px;">
+
+<!-- Duplicação dos lixos -->
+<img id="lixo9" class="lixo" src="/JOGO/IMG/lata.png" alt="Lixo de metal" data-tipo="metais" draggable="true" style="left: -180px; top: 300px;">
+<img id="lixo10" class="lixo" src="/JOGO/IMG/Garrafa de vidro.png" alt="Lixo de vidro" data-tipo="vidro" draggable="true" style="left: -110px; top: 300px;">
+<img id="lixo11" class="lixo" src="/JOGO/IMG/papel.png" alt="Lixo de papel" data-tipo="papéis" draggable="true" style="left: 120px; top: 400px; width: 130px; height: 90px;">
+<img id="lixo12" class="lixo" src="/JOGO/IMG/garrafa pet.png" alt="Lixo de plástico" data-tipo="plástico" draggable="true" style="left: -50px; top: 280px;">
+<!-- Novos lixos adicionados -->
+<img id="lixo13" class="lixo" src="/JOGO/IMG/lata amassada deitada.png" alt="Lixo de alumínio" data-tipo="metais" draggable="true" style="left: -400px; top: 380px; width: 90px; height: 50px;">
+<img id="lixo14" class="lixo" src="/JOGO/IMG/garrafa pet 2.png" alt="Lixo de vidro" data-tipo="plástico" draggable="true" style="left: 20px; top: 310px; width: 50px; height: 100px;">
+<img id="lixo15" class="lixo" src="/JOGO/IMG/papel.png" alt="Lixo de papel" data-tipo="papéis" draggable="true" style="left: 320px; top: 350px; width: 130px; height: 90px;">
+<img id="lixo16" class="lixo" src="/JOGO/IMG/sacolinha.png" alt="Lixo de plástico" data-tipo="plástico" draggable="true" style="left: -50px; top: 250px; width: 150px; height: 90px;">
+<!-- Duplicação dos lixos -->
+<img id="lixo17" class="lixo" src="/JOGO/IMG/lata.png" alt="Lixo de metal" data-tipo="metais" draggable="true" style="left: -180px; top: 300px;">
+<img id="lixo18" class="lixo" src="/JOGO/IMG/Garrafa de vidro.png" alt="Lixo de vidro" data-tipo="vidro" draggable="true" style="left: -110px; top: 300px;">
+<img id="lixo19" class="lixo" src="/JOGO/IMG/papel.png" alt="Lixo de papel" data-tipo="papéis" draggable="true" style="left: 120px; top: 400px; width: 130px; height: 90px;">
+<img id="lixo20" class="lixo" src="/JOGO/IMG/garrafa pet.png" alt="Lixo de plástico" data-tipo="plástico" draggable="true" style="left: -50px; top: 280px;">
+<!-- Lixeiras -->
+<div id="lixeiras">
+    <img class="lixeira" id="lixeira1" src="/JOGO/IMG/lixeirametais.png" alt="Lixeira de metais" data-tipo="metais">
+    <img class="lixeira" id="lixeira2" src="/JOGO/IMG/lixeiravidro.png" alt="Lixeira de vidro" data-tipo="vidro">
+    <img class="lixeira" id="lixeira3" src="/JOGO/IMG/lixeirapapeis.png" alt="Lixeira de papéis" data-tipo="papéis">
+    <img class="lixeira" id="lixeira4" src="/JOGO/IMG/lixeiraplastico.png" alt="Lixeira de plástico" data-tipo="plástico">
+</div>
+        <div id="mensagem">Parabéns!</div>
+        <div id="erro">Essa não é a correta!</div>
+    </div>
+    <audio id="efeitoSonoro" loop>
+        <source src="/JOGO/SND/backmusic.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      <button id="playAudio" class="transparent-button">
+        <span id="soundIcon" class="sound-icon">🔊</span>
+      </button>
+      <audio id="somOndas" loop>
+        <source src="/JOGO/SND/ondas.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      <video id="cutsceneVideo" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover;" controls>
+        <source src="/JOGO/IMG/Cutscene Final.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <script>
+
+const margin = 10;
+let lixosEliminados = 0;
+let totalLixos = 20;
+let lixos = document.querySelectorAll('.lixo');
+let lixeiras = document.querySelectorAll('.lixeira');
+let currentLixo = null;
+let offsetX, offsetY;
+let originalLeft, originalTop;
+let isDragging = false;
+// Salva a posição original do lixo
+function verificarTodosLixosEliminados() {
+    console.log(`Verificando: ${lixosEliminados} de ${totalLixos} lixos eliminados`);
+    if (lixosEliminados === totalLixos) {
+        console.log("Todos os lixos foram eliminados!");
+      // Exibir a cutscene final
+      const bodyElements = document.body.children;
+                for (let element of bodyElements) {
+                    element.classList.add('hidden'); // Oculta todos os elementos
+                }
+                const cutsceneVideo = document.getElementById('cutsceneVideo');
+                cutsceneVideo.style.display = 'block'; // Torna o vídeo visível
+                cutsceneVideo.play(); // Inicia a reprodução do vídeo
+
+                // Redireciona para a página fim.html após o vídeo
+                cutsceneVideo.onended = function() {
+                    window.location.href = '/JOGO/fim.html'; // Redireciona para a página fim.html
+                };
+            }
+        }
+lixos.forEach(lixo => {
+    lixo.classList.add('initial');
+    lixo.addEventListener('mousedown', function (event) {
+        currentLixo = lixo; // Armazena o lixo atual
+        offsetX = event.clientX - lixo.getBoundingClientRect().left; // Deslocamento horizontal
+        offsetY = event.clientY - lixo.getBoundingClientRect().top; // Deslocamento vertical
+        originalLeft = lixo.style.left;
+        originalTop = lixo.style.top;
+
+        lixo.style.position = 'absolute'; // A posição do lixo deve ser absoluta durante o arrasto
+        lixo.style.zIndex = '1000'; // O lixo aparece acima dos outros elementos
+        isDragging = true;
+    });
+
+    lixo.addEventListener('dragend', function () {
+        currentLixo = null; // Limpa a referência ao final do arrasto
+        isDragging = false;
+    });
+});
+
+
+// Permite o drop nas lixeiras
+lixeiras.forEach(lixeira => {
+    lixeira.addEventListener('mousedown', function (event) {
+        if (currentLixo) {
+            let tipoLixo = currentLixo.getAttribute('data-tipo');
+            let tipoLixeira = this.getAttribute('data-tipo');
+
+            // Verifica se o lixo foi arrastado para a lixeira correta
+            if (tipoLixo === tipoLixeira) {
+                document.getElementById('mensagem').style.display = 'block';
+                document.getElementById('erro').style.display = 'none';
+                currentLixo.style.display = 'none'; // Some com o lixo
+                lixosEliminados++; // Incrementa o contador de lixos eliminados
+                console.log(`Lixo eliminado: ${currentLixo.id}`);
+                console.log(`Total de lixos eliminados: ${lixosEliminados}`);
+                console.log(`Total de lixos: ${totalLixos}`);
+                
+                verificarTodosLixosEliminados(); // Chama a função de verificação
+                
+                setTimeout(() => {
+                    document.getElementById('mensagem').style.display = 'none';
+                }, 1000);
+            } else {
+                // Retorna o lixo para a posição original se a lixeira estiver incorreta
+                document.getElementById('erro').style.display = 'block';
+                document.getElementById('mensagem').style.display = 'none';
+
+                currentLixo.style.left = originalLeft;
+                currentLixo.style.top = originalTop;
+
+                setTimeout(() => {
+                    document.getElementById('erro').style.display = 'none';
+                }, 1000);
+            }
+            currentLixo = null; // Limpa a referência
+        }
+    });
+});
+
+// Movimentação do lixo durante o arrasto
+document.addEventListener('mousemove', function (event) {
+    if (isDragging && currentLixo) {
+        // Atualiza a posição do lixo para seguir diretamente o cursor
+        const rect = currentLixo.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+        const maxX = window.innerWidth - width;
+        const maxY = window.innerHeight - height;
+
+        let newX = event.clientX - (width / 2);
+        let newY = event.clientY - (height / 2) - 500;
+
+        // Restringe a posição para evitar que a imagem saia da tela
+        if (newX < 0) {
+            newX = 0;
+        } else if (newX > maxX) {
+            newX = maxX;
+        }
+
+        if (newY < 0) {
+            newY = 0;
+        } else if (newY > maxY) {
+            newY = maxY;
+        }
+
+        currentLixo.style.left = `${newX}px`;
+        currentLixo.style.top = `${newY}px`;
+    }
+});
+        function shuffleLixo() {
+            const lixos = document.querySelectorAll('.lixo');
+            lixos.forEach(lixo => {
+                // Gera uma nova posição aleatória
+                const randomX = Math.floor(Math.random() * (1300)); // de -700 a 700 pixels
+                const randomY = Math.floor(Math.random() * (20) - 200); // de 0 a 200 pixels
+
+                // Aplica as novas posições
+                lixo.style.left = randomX + 'px';
+                lixo.style.top = randomY + 'px';
+            });
+        }
+
+        // Chama a função de embaralhamento ao carregar a página
+        window.onload = function() {
+    lixos.forEach(lixo => {
+        lixo.classList.remove('initial');
+        // Aplica as posições corretas aqui
+        shuffleLixo();
+    });
+};
+document.addEventListener('DOMContentLoaded', () => {
+    const playAudioButton = document.getElementById('playAudio');
+    const soundIcon = document.getElementById('soundIcon');
+    const somOndas = document.getElementById('somOndas');
+    const efeitoSonoro = document.getElementById('efeitoSonoro');
+    let isPlaying = false; // Variável para rastrear se o som está tocando
+
+    playAudioButton.addEventListener('click', () => {
+        if (isPlaying) {
+            somOndas.pause(); // Pausa o som das ondas
+            efeitoSonoro.pause(); // Pausa o efeito sonoro
+            soundIcon.classList.add('paused'); // Adiciona a classe para o traço vermelho
+            isPlaying = false; // Atualiza o estado
+        } else {
+            somOndas.play().catch(error => {
+                console.error("Erro ao tentar tocar o som das ondas: ", error);
+            }); // Toca o som das ondas
+            efeitoSonoro.play().catch(error => {
+                console.error("Erro ao tentar tocar o efeito sonoro: ", error);
+            }); // Toca o efeito sonoro
+            soundIcon.classList.remove('paused'); // Remove a classe para o traço vermelho
+            isPlaying = true; // Atualiza o estado
+        }
+    });
+});
+        </script>
+        <script src="/JOGO/JS/script2.js"></script>
+</body>
+</html>

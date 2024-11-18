@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/JOGO/CSS/style.css" media="screen" />
+    <title>Fim</title>
+    <style>
+        .transparent-button {
+                 background-color: transparent; /* Torna o fundo do botão transparente */
+                 border: none; /* Remove a borda do botão */
+                 cursor: pointer; /* Muda o cursor ao passar o mouse */
+                 font-size: 24px; /* Tamanho do ícone */
+                 padding: 10px; /* Adiciona um pouco de espaço ao redor do ícone */
+                 outline: none; /* Remove o contorno ao clicar */
+                 position: absolute;
+                 margin-top: -680px;
+                 margin-left: -1440px;
+                }
+                body {
+                    
+        margin: 0; /* Remove a margem padrão do corpo */
+        padding: 0; /* Remove o padding padrão do corpo */
+        overflow: hidden; /* Opcional: impede a rolagem da página */
+    }
+             .transparent-button:hover {
+                 opacity: 0.7; /* Adiciona um efeito de hover para indicar que o botão é clicável */
+             }
+     
+             .paused {
+                 position: relative; /* Para posicionar o pseudo-elemento */
+               
+                }
+     
+             .paused::after {
+                 content: ""; /* Cria um pseudo-elemento */
+                 position: absolute; /* Posiciona em relação ao ícone */
+                 width: 100%; /* Largura igual ao ícone */
+                 height: 4px; /* Altura do traço */
+                 background-color: red; /* Cor do traço */
+                 top: 50%; /* Centraliza verticalmente */
+                 left: 0; /* Alinha à esquerda */
+                 transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+                }
+             .hidden {
+            display: none; /* Esconde os elementos */
+        }
+        video {
+    position: fixed; /* Fixa o vídeo na tela */
+    top: -90px; /* Ajusta a posição para cima */
+    left: 0; /* Alinha à esquerda */
+    width: 100vw; /* Largura total da janela */
+    height: 140vh; /* Aumenta a altura para cobrir a área desejada */
+    object-fit: cover; /* Cobre a tela mantendo a proporção */
+    z-index: -1; /* Coloca o vídeo atrás de outros elementos */
+}
+@import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
+
+html, body { height: 100%; }
+body { display: flex; justify-content: center; align-items: center; margin:20px 0; text-align:center; background:beige; overflow:hidden; }
+
+h1 {
+ font-size:5em;
+ font:bold 18.5vw/1.6;
+ font-family: Quicksand;
+ font-size: 140px;
+ user-select:none;
+ margin-top:-320px;
+ margin-left: 50px;
+}
+
+h1 span { display:inline-block; animation:bounce 5.2s ease-in-out infinite; }
+ @keyframes float {
+  0%,100%{ transform:none; }
+  33%{ transform:translateY(-1px) rotate(-2deg); }
+  66%{ transform:translateY(1px) rotate(2deg); }
+}
+
+@keyframes bounce {
+  0%,100%{ transform:translate(0); }
+  25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+  50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+}
+
+span:nth-child(4n) { color:hsl(0, 100%, 55%); text-shadow:3px 3px hsl(0, 100%, 14%), 2px 2px}
+span:nth-child(4n-1) { color:hsl(19, 100%, 50%); text-shadow:3px 3px hsl(7, 97%, 15%), 2px 2px  }
+span:nth-child(4n-2) { color:hsl(42, 100%, 46%); text-shadow:3px 3px hsl(44, 100%, 18%), 2px 2px  }
+span:nth-child(4n-3) { color:hsl(33, 96%, 18%); text-shadow:3px 3px hsl(31, 100%, 7%), 2px 2px }
+
+h1 span:nth-child(2){ animation-delay:.05s; }
+h1 span:nth-child(3){ animation-delay:.1s; }
+h1 span:nth-child(4){ animation-delay:.15s; }
+h1 span:nth-child(5){ animation-delay:.2s; }
+h1 span:nth-child(6){ animation-delay:.25s; }
+h1 span:nth-child(7){ animation-delay:.3s; }
+h1 span:nth-child(8){ animation-delay:.35s; }
+h1 span:nth-child(9){ animation-delay:.4s; }
+h1 span:nth-child(10){ animation-delay:.45s; }
+h1 span:nth-child(11){ animation-delay:.5s; }
+h1 span:nth-child(12){ animation-delay:.55s; }
+h1 span:nth-child(13){ animation-delay:.6s; }
+h1 span:nth-child(14){ animation-delay:.65s; }
+
+
+#início {
+  filter: drop-shadow(0 0 50px rgb(255, 255, 255));
+  position: absolute;
+  left: 580px;
+  top: 500px;
+  font-family: Caramel;
+  font-size: 30px;
+  border: 0;
+  width: 400px;
+  line-height: 2.5;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(204, 31, 4);
+  background-image: linear-gradient(
+      to top left,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 20%,
+      rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  animation: bounceFadeIn 4.5s ease-out, float2 3s ease-in-out infinite;
+  animation-delay: 0s, 4.5s;
+}
+
+#início:hover {
+  background-color: rgb(183, 3, 3);
+}
+
+#início:active {
+  box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+         </style>
+</head>
+<body>
+    <audio id="efeitoSonoro" loop>
+        <source src="/JOGO/SND/backmusic.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      <button id="playAudio" class="transparent-button">
+        <span id="soundIcon" class="sound-icon">🔊</span>
+      </button>
+      <audio id="somOndas" loop>
+        <source src="/JOGO/SND/ondas.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+      </audio>
+      <video autoplay loop muted style="width: 100%; height: 140%;">
+        <source src="/JOGO/IMG/FINAL.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+    <h1><span>P</span><span>A</span><span>R</span><span>A</span><span>B</span><span>É</span><span>N</span><span>S</span><span>!</span></h1>
+    <a href="/JOGO/index.html"><button id="início" type="button">Jogar Novamente</button></a>
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const playAudioButton = document.getElementById('playAudio');
+    const soundIcon = document.getElementById('soundIcon');
+    const somOndas = document.getElementById('somOndas');
+    const efeitoSonoro = document.getElementById('efeitoSonoro');
+    let isPlaying = false; // Variável para rastrear se o som está tocando
+
+    playAudioButton.addEventListener('click', () => {
+        if (isPlaying) {
+            somOndas.pause(); // Pausa o som das ondas
+            efeitoSonoro.pause(); // Pausa o efeito sonoro
+            soundIcon.classList.add('paused'); // Adiciona a classe para o traço vermelho
+            isPlaying = false; // Atualiza o estado
+        } else {
+            somOndas.play().catch(error => {
+                console.error("Erro ao tentar tocar o som das ondas: ", error);
+            }); // Toca o som das ondas
+            efeitoSonoro.play().catch(error => {
+                console.error("Erro ao tentar tocar o efeito sonoro: ", error);
+            }); // Toca o efeito sonoro
+            soundIcon.classList.remove('paused'); // Remove a classe para o traço vermelho
+            isPlaying = true; // Atualiza o estado
+        }
+    });
+});
+</script>
+</html>
