@@ -24,7 +24,7 @@ function adicionarEventosDeClique() {
 function verificarTodasClicadas() {
     if (imagensClicadas === totalImagens) {
         // Redireciona para fase2.html
-        window.location.href = '/JOGO/fase2.html';
+        window.location.href = '../JOGO/fase2.html';
     }
 }
 
@@ -74,7 +74,7 @@ if (popupMessage) { // Verifica se o elemento existe
 }
 document.getElementById('sair').addEventListener('click', function() {
     if (confirm("Você realmente deseja sair?")) {
-      window.location.href = '/JOGO/saida.html'; // Altere para a URL desejada
+      window.location.href = '../JOGO/saida.html'; // Altere para a URL desejada
     }
   });
   // Função para atualizar o progresso geral
@@ -108,7 +108,7 @@ function updateGlobalProgress() {
         pausarEfeitoSonoro(); // Pausa o efeito sonoro antes de redirecionar
         localStorage.setItem('continuarMusica', 'true'); // Armazena o estado para continuar a música
         setTimeout(() => {
-            window.location.href = 'fase3.html';
+            window.location.href = '../JOGO/fase3.html';
         }, 500);
     }
 }
