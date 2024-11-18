@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./JOGO/CSS/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../JOGO/CSS/style.css" media="screen" />
     <title>Menu</title>
     <style>
    .transparent-button {
@@ -48,19 +48,19 @@
     </style>
 </head>
 <body>
-    <img id="logo" src="./JOGO/IMG/logojogo.png">
-    <img id="mar" src="./JOGO/IMG/fundomarpc.png">
+    <img id="logo" src="../JOGO/IMG/logojogo.png">
+    <img id="mar" src="../JOGO/IMG/fundomarpc.png">
   <button id="início" type="button">Jogar</button>
     <button id="opções">Opções</button>
     <audio id="efeitoSonoro" loop>
-        <source src="./JOGO/SND/backmusic.mp3" type="audio/mpeg">
+        <source src="../JOGO/SND/backmusic.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
     </audio>
     <button id="playAudio" class="transparent-button">
         <span id="soundIcon" class="sound-icon">🔊</span>
     </button>
     <audio id="somOndas" loop>
-        <source src="./JOGO/SND/ondas.mp3" type="audio/mpeg">
+        <source src="../JOGO/SND/ondas.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
     </audio>
 
@@ -79,11 +79,11 @@
         </div>
     </div>
     <video id="cutsceneVideo" width="640" height="360" style="display: none;" controls>
-        <source src="./JOGO/IMG/Cutscene Início.mp4" type="video/mp4">
+        <source src="../JOGO/IMG/Cutscene Início.mp4" type="video/mp4">
         Seu navegador não suporta o elemento de vídeo.
     </video>
     <button id="sair" type="button">Sair</button>
-    <script src="./JOGO/JS/script.js"></script>
+    <script src="../JOGO/JS/script.js"></script>
     <script>
   document.addEventListener('DOMContentLoaded', () => {
     const playAudioButton = document.getElementById('playAudio');
