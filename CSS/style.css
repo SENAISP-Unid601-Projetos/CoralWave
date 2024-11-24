@@ -562,9 +562,7 @@ body {
     width: 50%; /* Faz a imagem ocupar toda a largura do cabeçalho */
     margin-left: -570px;
   }
-  #menu-toggle{
-    position: absolute;
-  }
+
 .escrito {
   margin-left: 0px; /* Ajuste a margem esquerda conforme necessário */
   margin-top: 400px; /* Ajuste a margem superior conforme necessário */
@@ -664,7 +662,7 @@ body {
   .definicao h4 {
       font-size: 10px; /* Tamanho da fonte reduzido */
       margin: 10px 0; /* Margem entre o texto */
-      margin-top: -100px;
+      margin-top: -50px;
   }
   .definicao img {
     max-width: 100%; /* Limita a largura máxima da imagem */
@@ -674,6 +672,7 @@ body {
       text-align: center;
       padding: 10px;
       align-items: center;
+      margin-top: 200px;
   }
 
   .gamer {
@@ -696,7 +695,7 @@ display: none;
 .funde {
   width: 120%; /* Aumenta a largura da imagem */
   margin-left: -10%; /* Ajusta o alinhamento se necessário */
-margin-top: 150px;
+margin-top: 350px;
 }
 .big-button {
   width: 80%; /* Botões ocupam 80% da largura */
@@ -740,8 +739,8 @@ padding: 10px; /* Ajusta o padding do botão */
   
   #jogue-agora2 {
     position: absolute;
-    bottom: 10px; /* Ajuste a posição vertical conforme necessário */
-    right: 200px; /* Ajuste a posição horizontal para menos a direita */
+    bottom: 0px; /* Ajuste a posição vertical conforme necessário */
+    right: -100px; /* Ajuste a posição horizontal para menos a direita */
   }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
@@ -784,8 +783,8 @@ padding: 10px; /* Ajusta o padding do botão */
   
   #jogue-agora2 {
     position: absolute;
-    bottom: 10px; /* Ajuste a posição vertical conforme necessário */
-    right: 200px; /* Ajuste a posição horizontal para menos a direita */
+    bottom: 0px; /* Ajuste a posição vertical conforme necessário */
+    right: -100px; /* Ajuste a posição horizontal para menos a direita */
   }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
