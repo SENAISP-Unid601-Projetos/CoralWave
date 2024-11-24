@@ -531,33 +531,34 @@ h4{
   right: 20px;
 }
 
+
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 770px) {
+  
 /* Estilos gerais (desktop) */
 body {
   font-family: Arial, sans-serif;
 }
-
-/* Ajustes para dispositivos móveis */
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
   #cabecalho {
       padding: 10px;
       text-align: center;
   }
 
   #cabecalho img {
-      width: 80%; /* Ajusta a largura da imagem do cabeçalho */
-      max-width: 300px; /* Limita a largura máxima */
+      width: 90%; /* Ajusta a largura da imagem do cabeçalho */
+      max-width: 400px; /* Limita a largura máxima */
   }
 
   .menu-items {
       display: flex;
-      flex-direction: column; /* Muda para coluna em dispositivos móveis */
-      align-items: center;
-      padding: 0;
+      justify-content: center; /* Alinha os itens do menu em uma linha */
+        flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+        padding: 0;
   }
 
   .menu-items h3 {
-      margin: 5px 0; /* Reduz a margem entre os itens do menu */
+      margin: 5px 10px; /* Reduz a margem entre os itens do menu */
       font-size: 16px; /* Tamanho da fonte reduzido */
   }
 
@@ -567,8 +568,8 @@ body {
   }
 
   #denis {
-      width: 90%; /* Ajusta a largura da imagem */
-      max-width: 300px; /* Limita a largura máxima */
+      width: 95%; /* Ajusta a largura da imagem */
+      max-width: 350px; /* Limita a largura máxima */
       margin: 10px auto; /* Centraliza a imagem */
   }
 
@@ -621,8 +622,8 @@ body {
   }
 
   .definicao h4 {
-      font-size: 14px; /* Tamanho da fonte reduzido */
-      margin: 10px 0; /* Margem entre o texto */
+      font-size: 10px; /* Tamanho da fonte reduzido */
+      margin: 5px 0; /* Margem entre o texto */
   }
 
   .game {
@@ -642,7 +643,7 @@ body {
 
   .big-buttons-container {
       display: flex;
-      flex-direction: column; /* Muda para coluna em dispositivos móveis */
+      flex-direction:row; /* Muda para coluna em dispositivos móveis */
       align-items: center;
   }
 
@@ -677,6 +678,6 @@ padding: 10px; /* Ajusta o padding do botão */
   }
 
   .bubbles {
-      display: none; /* Esconder as bolhas em dispositivos móveis, se necessário */
+      display:block; /* Esconder as bolhas em dispositivos móveis, se necessário */
   }
 }
