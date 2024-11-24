@@ -531,85 +531,85 @@ h4{
   right: 20px;
 }
 
-/* Media Queries para dispositivos móveis */
-@media (max-width: 768px) {
-  body {
-      font-size: 14px; /* Ajusta o tamanho da fonte para dispositivos móveis */
-      margin: 0; /* Remove margens do body */
-      padding: 0; /* Remove preenchimento do body */
-  }
+/* Estilos gerais (desktop) */
+body {
+  font-family: Arial, sans-serif;
+}
 
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
   #cabecalho {
-      flex-direction: column; /* Muda a direção para coluna em telas pequenas */
-      align-items: center; /* Centraliza os itens */
-      padding: 10px 0; /* Adiciona um pouco de padding para espaçamento */
+      flex-direction: column;
+      align-items: center;
   }
 
   .menu-items {
-      flex-direction: column; /* Coloca os itens do menu em coluna */
-      align-items: center; /* Centraliza os itens do menu */
-      width: 100%; /* Garante que ocupe toda a largura */
-      padding: 0; /* Remove padding */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
 
   .menu-items h3 {
-      margin: 5px 0; /* Ajusta o espaçamento entre os itens do menu */
-      font-size: 16px; /* Ajusta o tamanho da fonte dos itens do menu */
+      margin: 10px 0;
   }
 
   #imagemp {
-      text-align: center; /* Centraliza as imagens */
-      margin-top: 20px; /* Ajusta a margem superior para dispositivos móveis */
+      text-align: center;
   }
 
   #denis {
-      width: 70%; /* Ajusta a largura da imagem */
-      height: auto; /* Mantém a proporção da imagem */
-  }
-
-  #jogue-agora, #jogue-agora2 {
-      width: 90%; /* Ajusta a largura dos botões */
-      margin: 10px auto; /* Centraliza os botões */
-      padding: 10px; /* Adiciona um pouco de preenchimento */
-      font-size: 16px; /* Ajusta o tamanho da fonte dos botões */
-      display: block; /* Garante que os botões sejam exibidos em bloco */
-  }
-
-  #destaques {
-      margin-top: 10px; /* Ajusta a margem superior para dispositivos móveis */
-      text-align: center; /* Centraliza o texto */
-      padding: 0 10px; /* Adiciona padding lateral */
-  }
-
-  #destaq {
-      font-size: 20px; /* Ajusta o tamanho do título */
+      width: 80%; /* Ajuste a largura da imagem para caber na tela */
   }
 
   .manchetes-container {
       display: flex;
-      flex-direction: column; /* Alinha os itens em coluna */
-      align-items: center; /* Centraliza os itens */
-      gap: 10px; /* Espaço entre os itens */
-      padding: 0 10px; /* Adiciona padding lateral */
+      flex-wrap: wrap;
+      justify-content: center;
   }
 
   .manchete {
-      width: 100%; /* Faz cada item ocupar toda a largura disponível */
-      text-align: center; /* Centraliza o texto dos itens */
-      margin: 0; /* Remove margens */
-      font-size: 14px; /* Ajusta o tamanho da fonte das manchetes */
+      width: 45%; /* Ajuste a largura das manchetes */
+      margin: 5px;
   }
 
-  h1 {
-      font-size: 24px; /* Ajusta o tamanho da fonte do título principal */
+  .estatico {
+      text-align: center;
   }
 
-  h3 {
-      font-size: 18px; /* Ajusta o tamanho da fonte dos subtítulos */
+  .definicao h4 {
+      font-size: 14px; /* Reduzir o tamanho da fonte para dispositivos móveis */
   }
 
-  #destaques img {
-      width: 100%; /* Faz a imagem de destaques ocupar toda a largura */
-      height: auto; /* Mantém a proporção da imagem */
+  .game {
+      text-align: center;
+  }
+
+  .big-buttons-container {
+      flex-direction: column; /* Muda para coluna em dispositivos móveis */
+  }
+
+  .big-button {
+      width: 100%; /* Botões ocupam toda a largura */
+      margin: 10px 0; /* Adiciona espaçamento entre os botões */
+  }
+
+  .footer-content {
+      flex-direction: column; /* Muda para coluna em dispositivos móveis */
+      align-items: center;
+  }
+
+  .footer-section {
+      margin: 5px 0; /* Adiciona espaçamento entre as seções do rodapé */
+  }
+
+  .bubbles {
+      display: none; /* Esconder as bolhas em dispositivos móveis, se necessário */
+  }
+
+  #btnTopo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: block; /* Mostrar botão de voltar ao topo */
   }
 }
