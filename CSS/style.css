@@ -672,7 +672,7 @@ body {
       text-align: center;
       padding: 10px;
       align-items: center;
-      margin-top: 200px;
+      margin-top: 0px;
   }
 
   .gamer {
@@ -708,6 +708,7 @@ display: none;
   .footer-content {
       text-align: center;
       padding: 10px;
+      margin-top: -50px;
   }
 
   .footer-section {
@@ -733,14 +734,14 @@ padding: 10px; /* Ajusta o padding do botão */
   }
   #jogue-agora {
     position: absolute;
-    bottom: 600px; /* Ajuste a posição vertical conforme necessário */
+    bottom: 550px; /* Ajuste a posição vertical conforme necessário */
     right: 20px; /* Ajuste a posição horizontal para o final da imagem */
   }
   
   #jogue-agora2 {
     position: absolute;
-    bottom: 0px; /* Ajuste a posição vertical conforme necessário */
-    right: -100px; /* Ajuste a posição horizontal para menos a direita */
+    bottom: 20px; /* Ajuste a posição vertical conforme necessário */
+    margin-left: -300px; /* Ajuste a posição horizontal para menos a direita */
   }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
@@ -777,14 +778,14 @@ padding: 10px; /* Ajusta o padding do botão */
 }
   #jogue-agora {
     position: absolute;
-    bottom: 600px; /* Ajuste a posição vertical conforme necessário */
+    bottom: 550px; /* Ajuste a posição vertical conforme necessário */
     right: 20px; /* Ajuste a posição horizontal para o final da imagem */
   }
   
   #jogue-agora2 {
     position: absolute;
-    bottom: 0px; /* Ajuste a posição vertical conforme necessário */
-    right: -100px; /* Ajuste a posição horizontal para menos a direita */
+    bottom: 20px; /* Ajuste a posição vertical conforme necessário */
+    margin-left: -330px; /* Ajuste a posição horizontal para menos a direita */
   }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
