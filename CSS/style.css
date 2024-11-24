@@ -552,11 +552,10 @@ body {
   }
 
   .menu-items {
-    display: flex;
-    justify-content: center; /* Alinha os itens do menu em uma linha */
-    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
-    padding: 0;
-    margin: 0; /* Remove margens */
+    
+      flex-direction: column; /* Muda para coluna em dispositivos móveis */
+      align-items: center; /* Centraliza os itens do menu */
+  
   }
 
   .menu-items h3 {
