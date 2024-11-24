@@ -28,10 +28,6 @@ h3 {
 #cabecalho{
   position: fixed;
   z-index: 1;
-  width: 100%;
-}
-#imagemp {
-  text-align: center; /* Centraliza as imagens */
 }
 #jogue-agora {
   font-family: Quicksand;
@@ -72,11 +68,6 @@ h3 {
   background-color: rgb(0, 34, 255); /* Cinza semi-transparente */
   color: rgb(255, 255, 255);
 }
-#jogue-agora, #jogue-agora2 {
-  width: 90%; /* Ajusta a largura para dispositivos móveis */
-  margin: 10px auto; /* Centraliza os botões */
-  padding: 10px 20px; /* Adiciona um pouco de preenchimento */
-}
 .menu-items {
   display: flex;
     align-items: center;
@@ -88,7 +79,6 @@ h3 {
     right: 90px; /* Ajuste conforme necessário para que o último item fique em até 1400px */
     width: calc(1320px - 500px); /* Largura total da área do menu */
     gap: 50px;
-    justify-content: space-around; /* Espaça os itens uniformemente */
 }
 .menu-items h3 a {
   color: inherit; /* Herda a cor do texto do h3 */
@@ -210,10 +200,11 @@ h3 {
 }
 #destaques {
   display: flex;
-  flex-direction: column; /* Alinha os itens em coluna */
-  align-items: center; /* Centraliza os itens */
-  margin-top: 20px; /* Adiciona margem superior */
+  justify-content: center;
+  align-items: center;
+  margin-top: -2500px; /* Ajuste este valor para controlar a distância da imagem do Denis */
 }
+
 #destaques img {
   width: auto; /* ou defina uma largura específica se necessário */
   height: auto;
@@ -257,29 +248,7 @@ h1{
   column-gap: 90px; /* Aumenta o espaço horizontal entre as colunas */
     row-gap: 25px; /* Mantém o espaço vertical entre as linhas */
 }
-.manchetes-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsivo */
-  gap: 10px; /* Espaço entre os itens */
-}
 
-@media (max-width: 768px) {
-  h1 {
-      font-size: 24px; /* Ajusta o tamanho da fonte para cabeçalhos */
-  }
-
-  h3 {
-      font-size: 18px; /* Ajusta o tamanho da fonte para h3 */
-  }
-
-  #destaques {
-      margin-top: 10px; /* Ajusta a margem para dispositivos móveis */
-  }
-
-  .manchetes-container {
-      grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
-  }
-}
 /* Ajuste específico para cada manchete se necessário */
 #m1 { grid-column: 1; grid-row: 1; }
 #m2 { grid-column: 2; grid-row: 1; }
