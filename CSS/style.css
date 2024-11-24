@@ -559,9 +559,15 @@ body {
   }
 
   #cabecalho img {
-    width: 90%; /* Faz a imagem ocupar toda a largura do cabeçalho */
+    width: 60%; /* Faz a imagem ocupar toda a largura do cabeçalho */
   }
-
+.escrito {
+  margin-left: -200px; /* Ajuste a margem esquerda conforme necessário */
+  margin-top: 250px; /* Ajuste a margem superior conforme necessário */
+  font-size: 18px; /* Reduza o tamanho da fonte */
+  line-height: 1.5; /* Melhore a legibilidade */
+  max-width: 800px; /* Limite a largura máxima para melhor leitura */
+}
 .menu-items {
   display: none; /* Oculta o menu por padrão em dispositivos móveis */
   flex-direction: column; /* Coloca os itens em coluna */
@@ -729,7 +735,7 @@ padding: 10px; /* Ajusta o padding do botão */
   #jogue-agora2 {
     position: absolute;
     bottom: -20px; /* Ajuste a posição vertical conforme necessário */
-    right: -500px; /* Ajuste a posição horizontal para menos a direita */
+    right: -800px; /* Ajuste a posição horizontal para menos a direita */
   }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
@@ -759,5 +765,9 @@ padding: 10px; /* Ajusta o padding do botão */
 
 #menu-toggle {
     display: block; /* Oculta o botão em telas maiores */
+}
+.site-footer {
+  margin: 0; /* Remove margens do footer */
+  padding: 25px 0 45px; /* Ajusta padding conforme necessário */
 }
 }
