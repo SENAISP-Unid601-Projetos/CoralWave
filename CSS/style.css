@@ -559,14 +559,15 @@ body {
   }
 
   #cabecalho img {
-    width: 60%; /* Faz a imagem ocupar toda a largura do cabeçalho */
+    width: 50%; /* Faz a imagem ocupar toda a largura do cabeçalho */
+    margin-left: -500px;
   }
 .escrito {
-  margin-left: -200px; /* Ajuste a margem esquerda conforme necessário */
-  margin-top: 250px; /* Ajuste a margem superior conforme necessário */
+  margin-left: 20px; /* Ajuste a margem esquerda conforme necessário */
+  margin-top: 300px; /* Ajuste a margem superior conforme necessário */
   font-size: 18px; /* Reduza o tamanho da fonte */
   line-height: 1.5; /* Melhore a legibilidade */
-  max-width: 800px; /* Limite a largura máxima para melhor leitura */
+  max-width: 500px; /* Limite a largura máxima para melhor leitura */
 }
 .menu-items {
   display: none; /* Oculta o menu por padrão em dispositivos móveis */
@@ -728,14 +729,14 @@ padding: 10px; /* Ajusta o padding do botão */
   }
   #jogue-agora {
     position: absolute;
-    bottom: -400px; /* Ajuste a posição vertical conforme necessário */
+    bottom: 400px; /* Ajuste a posição vertical conforme necessário */
     right: 20px; /* Ajuste a posição horizontal para o final da imagem */
   }
   
   #jogue-agora2 {
     position: absolute;
-    bottom: -20px; /* Ajuste a posição vertical conforme necessário */
-    right: -800px; /* Ajuste a posição horizontal para menos a direita */
+    bottom: 500px; /* Ajuste a posição vertical conforme necessário */
+    right: 800px; /* Ajuste a posição horizontal para menos a direita */
   }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
