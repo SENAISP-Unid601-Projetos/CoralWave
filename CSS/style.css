@@ -546,7 +546,7 @@ body {
   }
 
   #cabecalho img {
-      width: 90%; /* Ajusta a largura da imagem do cabeçalho */
+      width: 95%; /* Ajusta a largura da imagem do cabeçalho */
       max-width: 400px; /* Limita a largura máxima */
   }
 
@@ -555,11 +555,12 @@ body {
       justify-content: center; /* Alinha os itens do menu em uma linha */
         flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
         padding: 0;
+        margin-left: -200px;
   }
 
   .menu-items h3 {
       margin: 5px 10px; /* Reduz a margem entre os itens do menu */
-      font-size: 16px; /* Tamanho da fonte reduzido */
+      font-size: 12px; /* Tamanho da fonte reduzido */
   }
 
   #imagemp {
@@ -568,8 +569,8 @@ body {
   }
 
   #denis {
-      width: 95%; /* Ajusta a largura da imagem */
-      max-width: 350px; /* Limita a largura máxima */
+      width: 97%; /* Ajusta a largura da imagem */
+      max-width: 500px; /* Limita a largura máxima */
       margin: 10px auto; /* Centraliza a imagem */
   }
 
@@ -609,7 +610,8 @@ body {
   .estaticor-container img {
       width: 80%; /* Ajusta a largura da imagem de transição */
       max-width: 250px; /* Limita a largura máxima */
-  }
+  align-items: center;
+    }
 
   .logoemp {
       width: 80%; /* Ajusta a largura da logo */
@@ -624,11 +626,17 @@ body {
   .definicao h4 {
       font-size: 10px; /* Tamanho da fonte reduzido */
       margin: 5px 0; /* Margem entre o texto */
+      left: 60px;
   }
-
+.escrito {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
   .game {
       text-align: center;
       padding: 10px;
+      align-items: center;
   }
 
   .gamer {
@@ -679,5 +687,8 @@ padding: 10px; /* Ajusta o padding do botão */
 
   .bubbles {
       display:block; /* Esconder as bolhas em dispositivos móveis, se necessário */
+  }
+  #jogue-agora, #jogue-agora2 {
+    max-width: 300px;
   }
 }
