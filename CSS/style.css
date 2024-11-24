@@ -531,6 +531,15 @@ h4{
   right: 20px;
 }
 
+#menu-toggle {
+  display: none; /* Oculta por padrão */
+  background: none;
+  border: none;
+  font-size: 24px; /* Tamanho do ícone do menu */
+  cursor: pointer;
+  color: #fff; /* Cor do ícone */
+  margin-left: auto; /* Para empurrar o botão para a direita */
+}
 
 
 /* Ajustes para dispositivos móveis */
@@ -550,18 +559,30 @@ body {
       width: 100%; /* Ajusta a largura da imagem do cabeçalho */
       max-width: 400px; /* Limita a largura máxima */
   }
+  #menu-toggle {
+    display: block; /* Mostra o botão apenas em dispositivos móveis */
+}
 
-  .menu-items {
-    
-      flex-direction: column; /* Muda para coluna em dispositivos móveis */
-      align-items: center; /* Centraliza os itens do menu */
-  
-  }
+.menu-items {
+    display: none; /* Oculta o menu por padrão em dispositivos móveis */
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens */
+    position: absolute; /* Para que o menu não afete o layout */
+    top: 100%; /* Posiciona abaixo do cabeçalho */
+    left: 0;
+    right: 0;
+    background-color: #0E203D; /* Cor de fundo do menu */
+    z-index: 10;
+}
 
-  .menu-items h3 {
-      margin: 5px 10px; /* Reduz a margem entre os itens do menu */
-      font-size: 8px; /* Tamanho da fonte reduzido */
-  }
+.menu-items.active {
+    display: flex; /* Mostra o menu quando ativo */
+}
+
+.menu-items h3 {
+    margin: 10px 0; /* Ajusta a margem dos itens do menu */
+}
+}
 
   #imagemp {
       text-align: center;
@@ -693,7 +714,7 @@ padding: 10px; /* Ajusta o padding do botão */
   #jogue-agora, #jogue-agora2 {
     width: 80%;
   }
-}
+
 @media (min-width: 769px) {
   .big-buttons-container {
       flex-direction: row; /* Muda para linha em telas maiores */
@@ -704,4 +725,13 @@ padding: 10px; /* Ajusta o padding do botão */
       width: auto; /* Botões têm largura automática */
       margin: 0 10px; /* Adiciona espaçamento horizontal entre os botões */
   }
+  .menu-items {
+    display: flex; /* Exibe o menu normalmente em telas maiores */
+    flex-direction: row; /* Mantém os itens em linha */
+    justify-content: center; /* Centraliza os itens */
+}
+
+#menu-toggle {
+    display: none; /* Oculta o botão em telas maiores */
+}
 }

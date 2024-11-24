@@ -33,3 +33,7 @@ window.addEventListener('scroll', function() {
          logoemp.style.transform = `translate(-50%, calc(-50% + ${logoOffset}px))`;
     }
 });
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menuItems = document.querySelector('.menu-items');
+    menuItems.classList.toggle('active'); // Alterna a classe 'active'
+});
