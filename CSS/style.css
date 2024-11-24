@@ -543,7 +543,6 @@ body {
   padding: 0;
 }
   #cabecalho {
-      padding: 10px;
       text-align: center;
   }
 
@@ -562,7 +561,7 @@ body {
 
   .menu-items h3 {
       margin: 5px 10px; /* Reduz a margem entre os itens do menu */
-      font-size: 12px; /* Tamanho da fonte reduzido */
+      font-size: 8px; /* Tamanho da fonte reduzido */
   }
 
   #imagemp {
@@ -600,9 +599,9 @@ body {
   }
 
   .manchete {
-      width: 90; /* Ajusta a largura das manchetes */
-      max-width: 200px; /* Limita a largura máxima */
-      margin: 10px; /* Adiciona margem entre as manchetes */
+    width: auto; /* Ajuste a largura conforme necessário */
+    max-width: 90%; /* Limita a largura máxima */
+    margin: 10px; /* Adiciona margem para espaçamento */
     
     }
 
@@ -651,20 +650,20 @@ body {
       text-align: center;
       padding: 10px;
   }
+/* Para os grandes botões */
+.big-buttons-container {
+  display: flex;
+  flex-direction: column; /* Muda para coluna em dispositivos móveis */
+  align-items: center;
+  width: 100%;
+}
 
-  .big-buttons-container {
-      display: flex;
-      flex-direction: column; /* Muda para coluna em dispositivos móveis */
-      align-items: center;
-      width: 100%;
-  }
-
-  .big-button {
-      width: 80%; /* Botões ocupam 80% da largura */
-      margin: 10px 0; /* Adiciona espaçamento entre os botões */
-      font-size: 18px; /* Tamanho da fonte reduzido para botões */
-      padding: 15px; /* Ajusta o padding para melhor toque */
-  }
+.big-button {
+  width: 80%; /* Botões ocupam 80% da largura */
+  margin: 10px 0; /* Adiciona espaçamento entre os botões */
+  font-size: 18px; /* Tamanho da fonte reduzido para botões */
+  padding: 15px; /* Ajusta o padding para melhor toque */
+}
 
   .footer-content {
       text-align: center;
