@@ -543,7 +543,7 @@ h4{
 
 
 /* Ajustes para dispositivos móveis */
-@media (max-width: 770px) {
+@media (max-width: 769px) {
   
 /* Estilos gerais (desktop) */
 body {
@@ -556,32 +556,44 @@ body {
   }
 
   #cabecalho img {
-      width: 100%; /* Ajusta a largura da imagem do cabeçalho */
-      max-width: 400px; /* Limita a largura máxima */
+    width: 100%; /* Faz a imagem ocupar toda a largura do cabeçalho */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove o espaço em branco abaixo da imagem */
   }
   #menu-toggle {
-    display: block; /* Mostra o botão apenas em dispositivos móveis */
+    display: none; /* Oculta por padrão */
+    background: none;
+    border: none;
+    font-size: 24px; /* Tamanho do ícone do menu */
+    cursor: pointer;
+    color: #fff; /* Cor do ícone */
+    margin-left: auto; /* Para empurrar o botão para a direita */
+    margin-top: 0; /* Remove a margem do topo */
 }
 
 .menu-items {
-    display: none; /* Oculta o menu por padrão em dispositivos móveis */
-    flex-direction: column; /* Coloca os itens em coluna */
-    align-items: center; /* Centraliza os itens */
-    position: absolute; /* Para que o menu não afete o layout */
-    top: 100%; /* Posiciona abaixo do cabeçalho */
-    left: 0;
-    right: 0;
-    background-color: #0E203D; /* Cor de fundo do menu */
-    z-index: 10;
+  display: none; /* Oculta o menu por padrão em dispositivos móveis */
+  flex-direction: column; /* Coloca os itens em coluna */
+  align-items: center; /* Centraliza os itens */
+  position: absolute; /* Para que o menu não afete o layout */
+  top: 100%; /* Posiciona abaixo do cabeçalho */
+  left: 0;
+  right: 0;
+  background-color: #0E203D; /* Cor de fundo do menu */
+  z-index: 10;
+  padding: 10px; /* Adiciona padding ao menu */
+  width: 100%; /* Garante que o menu ocupe toda a largura */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao menu */
+}
+
+.menu-items h3 {
+  margin: 5px 0; /* Ajusta a margem dos itens do menu */
+  font-size: 16px; /* Ajusta o tamanho da fonte */
+  color: white; /* Define a cor do texto */
 }
 
 .menu-items.active {
     display: flex; /* Mostra o menu quando ativo */
-}
-
-.menu-items h3 {
-    margin: 10px 0; /* Ajusta a margem dos itens do menu */
-}
 }
 
   #imagemp {
@@ -643,16 +655,18 @@ body {
   .definicao {
       text-align: center;
       padding: 10px;
+      display: flex; /* Usa flexbox para alinhar itens */
+      flex-direction: column; /* Alinha itens em coluna */
+      align-items: center; /* Centraliza os itens */
   }
 
   .definicao h4 {
       font-size: 10px; /* Tamanho da fonte reduzido */
       margin: 10px 0; /* Margem entre o texto */
   }
-.escrito {
-  width: 70%;
-  text-align: center;
-  padding: 10px;
+  .definicao img {
+    max-width: 100%; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção */
 }
   .game {
       text-align: center;
@@ -677,7 +691,10 @@ body {
   align-items: center;
   width: 100%;
 }
-
+.funde {
+  width: 120%; /* Aumenta a largura da imagem */
+  margin-left: -10%; /* Ajusta o alinhamento se necessário */
+}
 .big-button {
   width: 80%; /* Botões ocupam 80% da largura */
   margin: 10px 0; /* Adiciona espaçamento entre os botões */
@@ -712,9 +729,14 @@ padding: 10px; /* Ajusta o padding do botão */
       display:none; /* Esconder as bolhas em dispositivos móveis, se necessário */
   }
   #jogue-agora, #jogue-agora2 {
-    width: 80%;
+    padding: 8px 15px; /* Diminuindo o padding */
+    font-size: 14px; /* Diminuindo o tamanho da fonte */
   }
-
+  .site-footer {
+    margin: 0; /* Remove margens do footer */
+    padding: 25px 0 45px; /* Ajusta padding conforme necessário */
+}
+}
 @media (min-width: 769px) {
   .big-buttons-container {
       flex-direction: row; /* Muda para linha em telas maiores */
