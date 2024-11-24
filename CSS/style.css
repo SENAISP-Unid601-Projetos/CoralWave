@@ -661,6 +661,7 @@ body {
   .definicao h4 {
       font-size: 10px; /* Tamanho da fonte reduzido */
       margin: 10px 0; /* Margem entre o texto */
+      margin-top: -100px;
   }
   .definicao img {
     max-width: 100%; /* Limita a largura máxima da imagem */
