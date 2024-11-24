@@ -557,8 +557,6 @@ body {
 
   #cabecalho img {
     width: 90%; /* Faz a imagem ocupar toda a largura do cabeçalho */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Remove o espaço em branco abaixo da imagem */
   }
 
 .menu-items {
@@ -678,6 +676,7 @@ body {
 .big-buttons-container {
   position: relative; /* Mude para relative se necessário */
   margin-top: 300px; /* Ajuste conforme necessário para ficar antes do footer */
+display: none;
 }
 
 .funde {
@@ -689,6 +688,7 @@ body {
   margin: 10px 0; /* Adiciona espaçamento entre os botões */
   font-size: 18px; /* Tamanho da fonte reduzido para botões */
   padding: 15px; /* Ajusta o padding para melhor toque */
+display: none;
 }
 
   .footer-content {
@@ -740,12 +740,14 @@ padding: 10px; /* Ajusta o padding do botão */
   .big-buttons-container {
       flex-direction: row; /* Muda para linha em telas maiores */
       justify-content: center; /* Centraliza os botões */
-  }
+  display: none;
+    }
 
   .big-button {
       width: auto; /* Botões têm largura automática */
       margin: 0 10px; /* Adiciona espaçamento horizontal entre os botões */
-  }
+  display: none;
+    }
   .menu-items {
     display: flex; /* Exibe o menu normalmente em telas maiores */
     flex-direction: row; /* Mantém os itens em linha */
@@ -753,6 +755,6 @@ padding: 10px; /* Ajusta o padding do botão */
 }
 
 #menu-toggle {
-    display: none; /* Oculta o botão em telas maiores */
+    display: block; /* Oculta o botão em telas maiores */
 }
 }
