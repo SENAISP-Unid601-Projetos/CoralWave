@@ -537,79 +537,146 @@ body {
 }
 
 /* Ajustes para dispositivos móveis */
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
   #cabecalho {
-      flex-direction: column;
-      align-items: center;
+      padding: 10px;
+      text-align: center;
+  }
+
+  #cabecalho img {
+      width: 80%; /* Ajusta a largura da imagem do cabeçalho */
+      max-width: 300px; /* Limita a largura máxima */
   }
 
   .menu-items {
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /* Muda para coluna em dispositivos móveis */
       align-items: center;
+      padding: 0;
   }
 
   .menu-items h3 {
-      margin: 10px 0;
+      margin: 5px 0; /* Reduz a margem entre os itens do menu */
+      font-size: 16px; /* Tamanho da fonte reduzido */
   }
 
   #imagemp {
       text-align: center;
+      padding: 10px;
   }
 
   #denis {
-      width: 80%; /* Ajuste a largura da imagem para caber na tela */
+      width: 90%; /* Ajusta a largura da imagem */
+      max-width: 300px; /* Limita a largura máxima */
+      margin: 10px auto; /* Centraliza a imagem */
+  }
+
+  #bolhas {
+      width: 80%; /* Ajusta a largura da imagem de bolhas */
+      max-width: 250px; /* Limita a largura máxima */
+      margin: 10px auto;
+  }
+
+  #destaques {
+      text-align: center;
+      padding: 10px;
+  }
+
+  #destaq {
+      font-size: 24px; /* Tamanho da fonte do título reduzido */
   }
 
   .manchetes-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      padding: 0;
   }
 
   .manchete {
-      width: 45%; /* Ajuste a largura das manchetes */
-      margin: 5px;
+      width: 90%; /* Ajusta a largura das manchetes */
+      max-width: 200px; /* Limita a largura máxima */
+      margin: 10px; /* Adiciona margem entre as manchetes */
   }
 
   .estatico {
       text-align: center;
+      padding: 10px;
+  }
+
+  .estaticor-container img {
+      width: 80%; /* Ajusta a largura da imagem de transição */
+      max-width: 250px; /* Limita a largura máxima */
+  }
+
+  .logoemp {
+      width: 80%; /* Ajusta a largura da logo */
+      max-width: 250px; /* Limita a largura máxima */
+  }
+
+  .definicao {
+      text-align: center;
+      padding: 10px;
   }
 
   .definicao h4 {
-      font-size: 14px; /* Reduzir o tamanho da fonte para dispositivos móveis */
+      font-size: 14px; /* Tamanho da fonte reduzido */
+      margin: 10px 0; /* Margem entre o texto */
   }
 
   .game {
       text-align: center;
+      padding: 10px;
+  }
+
+  .gamer {
+      width: 80%; /* Ajusta a largura da imagem do jogo */
+      max-width: 250px; /* Limita a largura máxima */
+  }
+
+  .fundop {
+      text-align: center;
+      padding: 10px;
   }
 
   .big-buttons-container {
+      display: flex;
       flex-direction: column; /* Muda para coluna em dispositivos móveis */
+      align-items: center;
   }
 
   .big-button {
-      width: 100%; /* Botões ocupam toda a largura */
+      width: 80%; /* Botões ocupam 80% da largura */
       margin: 10px 0; /* Adiciona espaçamento entre os botões */
+      font-size: 18px; /* Tamanho da fonte reduzido para botões */
+      padding: 15px; /* Ajusta o padding para melhor toque */
   }
 
   .footer-content {
-      flex-direction: column; /* Muda para coluna em dispositivos móveis */
-      align-items: center;
+      text-align: center;
+      padding: 10px;
   }
 
   .footer-section {
       margin: 5px 0; /* Adiciona espaçamento entre as seções do rodapé */
   }
 
-  .bubbles {
-      display: none; /* Esconder as bolhas em dispositivos móveis, se necessário */
+  .footer-section h4 {
+      font-size: 14px; /* Tamanho da fonte reduzido no rodapé */
   }
 
   #btnTopo {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      display: block; /* Mostrar botão de voltar ao topo */
+      width: 50px;
+      height: 50px;
+      font-size: 20px; /* Tamanho da fonte do botão */
+padding: 10px; /* Ajusta o padding do botão */
+  }
+
+  .bubbles {
+      display: none; /* Esconder as bolhas em dispositivos móveis, se necessário */
   }
 }
