@@ -556,20 +556,10 @@ body {
   }
 
   #cabecalho img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do cabeçalho */
+    width: 90%; /* Faz a imagem ocupar toda a largura do cabeçalho */
     height: auto; /* Mantém a proporção da imagem */
     display: block; /* Remove o espaço em branco abaixo da imagem */
   }
-  #menu-toggle {
-    display: none; /* Oculta por padrão */
-    background: none;
-    border: none;
-    font-size: 24px; /* Tamanho do ícone do menu */
-    cursor: pointer;
-    color: #fff; /* Cor do ícone */
-    margin-left: auto; /* Para empurrar o botão para a direita */
-    margin-top: 0; /* Remove a margem do topo */
-}
 
 .menu-items {
   display: none; /* Oculta o menu por padrão em dispositivos móveis */
@@ -686,11 +676,10 @@ body {
   }
 /* Para os grandes botões */
 .big-buttons-container {
-  display: flex;
-  flex-direction: column; /* Muda para coluna em dispositivos móveis */
-  align-items: center;
-  width: 100%;
+  position: relative; /* Mude para relative se necessário */
+  margin-top: 300px; /* Ajuste conforme necessário para ficar antes do footer */
 }
+
 .funde {
   width: 120%; /* Aumenta a largura da imagem */
   margin-left: -10%; /* Ajusta o alinhamento se necessário */
@@ -728,7 +717,17 @@ padding: 10px; /* Ajusta o padding do botão */
   .bubbles {
       display:none; /* Esconder as bolhas em dispositivos móveis, se necessário */
   }
-  #jogue-agora, #jogue-agora2 {
+  #jogue-agora {
+    position: absolute;
+    bottom: 20px; /* Ajuste a posição vertical conforme necessário */
+    right: 20px; /* Ajuste a posição horizontal para o final da imagem */
+  }
+  
+  #jogue-agora2 {
+    position: absolute;
+    bottom: 20px; /* Ajuste a posição vertical conforme necessário */
+    right: 100px; /* Ajuste a posição horizontal para menos a direita */
+  }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
   }
