@@ -663,7 +663,7 @@ body {
   .definicao h4 {
       font-size: 10px; /* Tamanho da fonte reduzido */
       margin: 10px 0; /* Margem entre o texto */
-      margin-top: -50px;
+      margin-top: -70px;
   }
   .definicao img {
     max-width: 100%; /* Limita a largura máxima da imagem */
@@ -735,7 +735,7 @@ padding: 10px; /* Ajusta o padding do botão */
   }
   #jogue-agora {
     position: absolute;
-    bottom: 550px; /* Ajuste a posição vertical conforme necessário */
+    bottom: 570px; /* Ajuste a posição vertical conforme necessário */
     right: 20px; /* Ajuste a posição horizontal para o final da imagem */
   }
   
@@ -744,7 +744,7 @@ padding: 10px; /* Ajusta o padding do botão */
     bottom: 20px; /* Ajuste a posição vertical conforme necessário */
     margin-left: -300px; /* Ajuste a posição horizontal para menos a direita */
     right: 500px;
-    top:-20px;
+    top:-20px
   }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
