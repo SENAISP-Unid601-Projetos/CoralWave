@@ -735,7 +735,7 @@ padding: 10px; /* Ajusta o padding do botão */
   }
   #jogue-agora {
     position: absolute;
-    bottom: 570px; /* Ajuste a posição vertical conforme necessário */
+    bottom: 600px; /* Ajuste a posição vertical conforme necessário */
     right: 20px; /* Ajuste a posição horizontal para o final da imagem */
   }
   
@@ -774,7 +774,8 @@ padding: 10px; /* Ajusta o padding do botão */
 
 #menu-toggle {
     display: block; /* Oculta o botão em telas maiores */
-}
+right: 300px;
+  }
 .site-footer {
   margin: 0; /* Remove margens do footer */
   padding: 25px 0 45px; /* Ajusta padding conforme necessário */
