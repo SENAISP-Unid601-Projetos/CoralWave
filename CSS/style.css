@@ -545,9 +545,13 @@ h4{
 /* Ajustes para dispositivos móveis */
 @media (max-width: 769px) {
   #menu-toggle {
-    display: block; /* Certifique-se de que o botão do menu esteja visível */
-   right: 300px;
-    /* Outros estilos */
+    display: block; /* Oculta por padrão */
+    background: none;
+    border: none;
+    font-size: 24px; /* Tamanho do ícone do menu */
+    cursor: pointer;
+    color: #fff; /* Cor do ícone */
+    margin-right: auto; /* Para empurrar o botão para a direita */
   }
 /* Estilos gerais (desktop) */
 body {
