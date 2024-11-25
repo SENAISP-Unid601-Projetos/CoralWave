@@ -738,23 +738,9 @@ padding: 10px; /* Ajusta o padding do botão */
   .bubbles {
       display:none; /* Esconder as bolhas em dispositivos móveis, se necessário */
   }
-  #jogue-agora {
-    position: absolute;
-    bottom: 600px; /* Ajuste a posição vertical conforme necessário */
-    right: 20px; /* Ajuste a posição horizontal para o final da imagem */
-  }
   
-  #jogue-agora2 {
-    position: absolute;
-    bottom: 20px; /* Ajuste a posição vertical conforme necessário */
-    margin-left: -300px; /* Ajuste a posição horizontal para menos a direita */
-    right: 500px;
-    top:-20px;
-    display: none;
-  }#jogue-agora, #jogue-agora2 {
-    padding: 8px 15px; /* Diminuindo o padding */
-    font-size: 14px; /* Diminuindo o tamanho da fonte */
-  }
+  
+  
   .site-footer {
     margin: 0; /* Remove margens do footer */
     padding: 25px 0 45px; /* Ajusta padding conforme necessário */
@@ -786,18 +772,5 @@ right: 300px;
   margin: 0; /* Remove margens do footer */
   padding: 25px 0 45px; /* Ajusta padding conforme necessário */
 }
-  #jogue-agora {
-    position: absolute;
-    bottom: 550px; /* Ajuste a posição vertical conforme necessário */
-    right: 20px; /* Ajuste a posição horizontal para o final da imagem */
-  }
   
-  #jogue-agora2 {
-    position: absolute;
-    bottom: 20px; /* Ajuste a posição vertical conforme necessário */
-    margin-left: -330px; /* Ajuste a posição horizontal para menos a direita */
-  }#jogue-agora, #jogue-agora2 {
-    padding: 8px 15px; /* Diminuindo o padding */
-    font-size: 14px; /* Diminuindo o tamanho da fonte */
-  }
 }
