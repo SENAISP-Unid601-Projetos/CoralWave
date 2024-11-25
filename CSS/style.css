@@ -50,7 +50,7 @@ h3 {
   font-family: Quicksand;
   position: relative;
   display: inline-block;
-  transform: translate(1150px, -80px); /* Aumentei para direita (300px) e para cima (-100px) */
+  transform: translate(450px, -80px); /* Aumentei para direita (300px) e para cima (-100px) */
     padding: 10px 30px;
   /* Mantenha os outros estilos do seu botão aqui */
   /* Por exemplo: */
