@@ -546,6 +546,7 @@ h4{
 @media (max-width: 769px) {
   #menu-toggle {
     display: block; /* Certifique-se de que o botão do menu esteja visível */
+   right: 300px;
     /* Outros estilos */
   }
 /* Estilos gerais (desktop) */
@@ -742,6 +743,8 @@ padding: 10px; /* Ajusta o padding do botão */
     position: absolute;
     bottom: 20px; /* Ajuste a posição vertical conforme necessário */
     margin-left: -300px; /* Ajuste a posição horizontal para menos a direita */
+    right: 500px;
+    top:-20px;
   }#jogue-agora, #jogue-agora2 {
     padding: 8px 15px; /* Diminuindo o padding */
     font-size: 14px; /* Diminuindo o tamanho da fonte */
