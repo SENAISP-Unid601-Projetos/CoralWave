@@ -552,7 +552,7 @@ h4{
     cursor: pointer;
     color: #fff; /* Cor do ícone */
     margin-right: auto; /* Para empurrar o botão para a direita */
-  margin-left: -80px;
+  margin-left: 20px;
   }
 /* Estilos gerais (desktop) */
 body {
@@ -566,7 +566,7 @@ body {
 
   #cabecalho img {
     width: 50%; /* Faz a imagem ocupar toda a largura do cabeçalho */
-    margin-left: -570px;
+    margin-left: -500px;
   }
 
 .escrito {
